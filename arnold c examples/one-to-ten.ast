@@ -1,0 +1,22 @@
+MainNode
+	DeclareNode
+		LvalNode <isLessThan10>
+		ConstantNode <1>
+	DeclareNode
+		LvalNode <n>
+		ConstantNode <0>
+	WhileNode
+		ConditionNode <isLessThan10>
+		BodyNode
+			AssignmentNode
+				LvalNode <n>
+				SumNode
+					RvalNode <n>
+					ConstantNode <1>
+			PrintNode
+				VariableNode <n>
+			AssignmentNode
+				LvalNode <isLessThan10>
+				GreaterThanNode
+					ConstantNode <10>
+					RvalNode <n>

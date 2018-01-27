@@ -1,0 +1,33 @@
+MainNode
+	DeclareNode
+		LvalNode <limit>
+		ConstantNode <10>
+	DeclareNode
+		LvalNode <index>
+		ConstantNode <1>
+	DeclareNode
+		LvalNode <squared>
+		ConstantNode <1>
+	DeclareNode
+		LvalNode <loop>
+		ConstantNode <1>
+	WhileNode
+		ConditionNode <loop>
+		BodyNode
+			AssignmentNode
+				LvalNode <squared>
+				MultiplicationNode
+					RvalNode <index>
+					RvalNode <index>
+			PrintNode
+				VariableNode <squared>
+			AssignmentNode
+				LvalNode <loop>
+				GreaterThanNode
+					RvalNode <limit>
+					RvalNode <index>
+			AssignmentNode
+				LvalNode <index>
+				SumNode
+					RvalNode <index>
+					ConstantNode <1>
